@@ -70,6 +70,8 @@ body {
   font-family: "Zilla Slab", serif;
   font-weight: 400;
   font-style: normal;
+  background: navy;
+  /* color: white; */
 }
 
 code {

@@ -1,6 +1,9 @@
-import { initializeApp } from "firebase/app";
-
 import "./App.css";
+import { initializeApp } from "firebase/app";
+import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
+import Home from "./pages/Home/Home";
+import SubmitWord from "./pages/SubmitWord/SubmitWord";
+import Admin from "./pages/Admin/Admin";
 
 const firebaseConfig = {};
 
@@ -9,9 +12,22 @@ console.log({ app });
 
 function App() {
   return (
-    <div className="container mx-auto px-4">
-      <p>It works!!!</p>
-    </div>
+    // <div className="mx-auto">
+    //   <div className="container mx-auto">
+    //     <div className="bg-white rounded-full mt-3 p-4 text-center sticky">
+    //       <p className="mb-0">Tech Dictionary</p>
+    //     </div>
+    //   </div>
+    // </div>
+    <Router>
+      <div className="min-h-screen bg-gray-100">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/submit" element={<SubmitWord />} />
+          <Route path="/admin" element={<Admin />} />
+        </Routes>
+      </div>
+    </Router>
   );
 }
 
