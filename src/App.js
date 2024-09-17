@@ -1,6 +1,7 @@
 import "./App.css";
 import { initializeApp } from "firebase/app";
 import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
+
 import Home from "./pages/Home/Home";
 import SubmitWord from "./pages/SubmitWord/SubmitWord";
 import Admin from "./pages/Admin/Admin";
