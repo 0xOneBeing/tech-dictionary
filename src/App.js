@@ -21,7 +21,7 @@ function App() {
     //   </div>
     // </div>
     <Router>
-      <div className="min-h-screen bg-gray-100">
+      <div className="min-h-screen bg-[#132631] text-[#CBE1EA]">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/submit" element={<SubmitWord />} />
