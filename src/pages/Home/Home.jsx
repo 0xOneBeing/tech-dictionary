@@ -106,7 +106,7 @@ import { useNavigate } from "react-router-dom";
 
 function Home() {
   const [searchTerm, setSearchTerm] = useState("");
-  const navigate = useNavigate(); // Use navigate for programmatic routing
+  const navigate = useNavigate();
 
   const handleSearch = () => {
     if (searchTerm) {
