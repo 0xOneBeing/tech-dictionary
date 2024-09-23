@@ -1,12 +1,20 @@
 export default function Footer() {
+  const currentYear = new Date().getFullYear();
+
   return (
     <>
-      <div className="mx-auto">
-        <div className="container mx-auto">
-          <div className="bg-white rounded-full p-4 text-center sticky">
-            <p className="mb-0">Tech Dictionary</p>
-          </div>
-        </div>
+      <div className="bg-[var(--black-color)] text-[var(--white-color)] md:py-10 text-center">
+        <p className="mb-0">
+          &copy; {currentYear} Tech Dictionary by{" "}
+          <a
+            href="https://github.com/0xOneBeing/tech-dictionary.git"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-[--secondary-color] underline"
+          >
+            0xOneBeing
+          </a>
+        </p>
       </div>
     </>
   );

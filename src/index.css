@@ -98,9 +98,9 @@
 
 :root {
   --primary-color: #132631;
-  --secondary-color: "";
+  --secondary-color: #cbe1ea;
   --white-color: #ffffff;
-  --black-color: #000000;
+  --black-color: #0a1b27;
 }
 
 body {

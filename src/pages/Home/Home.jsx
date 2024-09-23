@@ -123,20 +123,23 @@ function Home() {
       <div className="p-6">
         <h1 className="text-3xl font-bold text-center">Tech Dictionary</h1>
         <div className="mt-8 flex justify-center">
-          <input
-            type="text"
-            placeholder="Search for a term..."
-            className="p-2 border border-gray-300 rounded"
-            value={searchTerm}
-            onChange={(e) => setSearchTerm(e.target.value)}
-            autoFocus
-          />
-          <button
-            onClick={handleSearch}
-            className="ml-2 p-2 bg-blue-500 text-white rounded"
-          >
-            Search
-          </button>
+          <form>
+            <input
+              type="text"
+              placeholder="Search for a term..."
+              className="p-2 border border-gray-300 rounded"
+              value={searchTerm}
+              onChange={(e) => setSearchTerm(e.target.value)}
+              autoFocus
+            />
+            <button
+              onClick={handleSearch}
+              type="submit"
+              className="ml-2 p-2 bg-blue-500 hover:bg-red-400 text-white transition-colors duration-300 rounded"
+            >
+              Search
+            </button>
+          </form>
         </div>
       </div>
     </>

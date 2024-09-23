@@ -14,7 +14,7 @@ function TermPage() {
       <Helmet>
         <title>{term} &middot; Tech Dictionary</title>
       </Helmet>
-      <div className="p-6">
+      <div className="p-4 lg:p-6">
         {foundTerm ? (
           <>
             <h1 className="text-2xl font-bold">{foundTerm.term}</h1>
@@ -26,6 +26,52 @@ function TermPage() {
             <p>This term does not exist in the dictionary yet.</p>
           </div>
         )}
+        <div>
+          <div className="p-6">
+            <h1 className="text-2xl font-bold">API</h1>
+            <p>Application Programming Interface.</p>
+          </div>
+          <div className="p-6">
+            <h1 className="text-2xl font-bold">API</h1>
+            <p>Application Programming Interface.</p>
+          </div>
+          <div className="p-6">
+            <h1 className="text-2xl font-bold">API</h1>
+            <p>Application Programming Interface.</p>
+          </div>
+          <div className="p-6">
+            <h1 className="text-2xl font-bold">API</h1>
+            <p>Application Programming Interface.</p>
+          </div>
+          <div className="p-6">
+            <h1 className="text-2xl font-bold">API</h1>
+            <p>Application Programming Interface.</p>
+          </div>
+          <div className="p-6">
+            <h1 className="text-2xl font-bold">API</h1>
+            <p>Application Programming Interface.</p>
+          </div>
+          <div className="p-6">
+            <h1 className="text-2xl font-bold">API</h1>
+            <p>Application Programming Interface.</p>
+          </div>
+          <div className="p-6">
+            <h1 className="text-2xl font-bold">API</h1>
+            <p>Application Programming Interface.</p>
+          </div>
+          <div className="p-6">
+            <h1 className="text-2xl font-bold">API</h1>
+            <p>Application Programming Interface.</p>
+          </div>
+          <div className="p-6">
+            <h1 className="text-2xl font-bold">API</h1>
+            <p>Application Programming Interface.</p>
+          </div>
+          <div className="p-6">
+            <h1 className="text-2xl font-bold">API</h1>
+            <p>Application Programming Interface.</p>
+          </div>
+        </div>
       </div>
     </>
   );
