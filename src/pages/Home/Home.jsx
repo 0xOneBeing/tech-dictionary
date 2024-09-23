@@ -102,6 +102,7 @@
 // -------------------------------------
 
 import React, { useState } from "react";
+import { Helmet } from "react-helmet";
 import { useNavigate } from "react-router-dom";
 
 function Home() {
@@ -115,24 +116,29 @@ function Home() {
   };
 
   return (
-    <div className="p-6">
-      <h1 className="text-3xl font-bold text-center">Tech Dictionary</h1>
-      <div className="mt-8 flex justify-center">
-        <input
-          type="text"
-          placeholder="Search for a term..."
-          className="p-2 border border-gray-300 rounded"
-          value={searchTerm}
-          onChange={(e) => setSearchTerm(e.target.value)}
-        />
-        <button
-          onClick={handleSearch}
-          className="ml-2 p-2 bg-blue-500 text-white rounded"
-        >
-          Search
-        </button>
+    <>
+      <Helmet>
+        <title>Tech Dictionary</title>
+      </Helmet>
+      <div className="p-6">
+        <h1 className="text-3xl font-bold text-center">Tech Dictionary</h1>
+        <div className="mt-8 flex justify-center">
+          <input
+            type="text"
+            placeholder="Search for a term..."
+            className="p-2 border border-gray-300 rounded"
+            value={searchTerm}
+            onChange={(e) => setSearchTerm(e.target.value)}
+          />
+          <button
+            onClick={handleSearch}
+            className="ml-2 p-2 bg-blue-500 text-white rounded"
+          >
+            Search
+          </button>
+        </div>
       </div>
-    </div>
+    </>
   );
 }
 

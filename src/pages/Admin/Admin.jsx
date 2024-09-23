@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { terms } from "../../mock_db/term"; // Import the local data
+import { Helmet } from "react-helmet";
 
 function Admin() {
   const [submissions, setSubmissions] = useState(terms); // Use terms array as submissions
@@ -10,30 +11,35 @@ function Admin() {
   };
 
   return (
-    <div className="p-6">
-      <h1 className="text-2xl font-bold text-center">Admin Dashboard</h1>
-      <div className="mt-6">
-        {submissions.length === 0 ? (
-          <p className="text-center">No submissions pending approval.</p>
-        ) : (
-          submissions.map((sub) => (
-            <div
-              key={sub.id}
-              className="p-4 mb-4 border border-gray-300 rounded"
-            >
-              <h2 className="font-semibold">{sub.term}</h2>
-              <p>{sub.description}</p>
-              <button
-                onClick={() => handleApprove(sub.id)}
-                className="mt-2 bg-blue-500 text-white p-2 rounded"
+    <>
+      <Helmet>
+        <title>Admin Dashboard &middot; Tech Dictionary</title>
+      </Helmet>
+      <div className="p-6">
+        <h1 className="text-2xl font-bold text-center">Admin Dashboard</h1>
+        <div className="mt-6">
+          {submissions.length === 0 ? (
+            <p className="text-center">No submissions pending approval.</p>
+          ) : (
+            submissions.map((sub) => (
+              <div
+                key={sub.id}
+                className="p-4 mb-4 border border-gray-300 rounded"
               >
-                Approve
-              </button>
-            </div>
-          ))
-        )}
+                <h2 className="font-semibold">{sub.term}</h2>
+                <p>{sub.description}</p>
+                <button
+                  onClick={() => handleApprove(sub.id)}
+                  className="mt-2 bg-blue-500 text-white p-2 rounded"
+                >
+                  Approve
+                </button>
+              </div>
+            ))
+          )}
+        </div>
       </div>
-    </div>
+    </>
   );
 }
 
