@@ -13,7 +13,7 @@ function Admin() {
   return (
     <>
       <Helmet>
-        <title>Admin Dashboard &middot; Tech Dictionary</title>
+        <title>Administrator Dashboard &middot; Tech Dictionary</title>
       </Helmet>
       <div className="p-6">
         <h1 className="text-2xl font-bold text-center">Admin Dashboard</h1>
@@ -30,7 +30,7 @@ function Admin() {
                 <p>{sub.description}</p>
                 <button
                   onClick={() => handleApprove(sub.id)}
-                  className="mt-2 bg-blue-500 text-white p-2 rounded"
+                  className="mt-2 bg-blue-500 hover:bg-red-400 text-white p-2 rounded"
                 >
                   Approve
                 </button>

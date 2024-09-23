@@ -2,74 +2,111 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url("https://fonts.googleapis.com/css2?family=Zilla+Slab:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap");
-
-.zilla-slab-light {
-  font-family: "Zilla Slab", serif;
+/* Poppins Font */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+.poppins-thin {
+  font-family: "Poppins", system-ui;
+  font-weight: 100;
+  font-style: normal;
+}
+.poppins-extralight {
+  font-family: "Poppins", system-ui;
+  font-weight: 200;
+  font-style: normal;
+}
+.poppins-light {
+  font-family: "Poppins", system-ui;
   font-weight: 300;
   font-style: normal;
 }
-
-.zilla-slab-regular {
-  font-family: "Zilla Slab", serif;
+.poppins-regular {
+  font-family: "Poppins", system-ui;
   font-weight: 400;
   font-style: normal;
 }
-
-.zilla-slab-medium {
-  font-family: "Zilla Slab", serif;
+.poppins-medium {
+  font-family: "Poppins", system-ui;
   font-weight: 500;
   font-style: normal;
 }
-
-.zilla-slab-semibold {
-  font-family: "Zilla Slab", serif;
+.poppins-semibold {
+  font-family: "Poppins", system-ui;
   font-weight: 600;
   font-style: normal;
 }
-
-.zilla-slab-bold {
-  font-family: "Zilla Slab", serif;
+.poppins-bold {
+  font-family: "Poppins", system-ui;
   font-weight: 700;
   font-style: normal;
 }
-
-.zilla-slab-light-italic {
-  font-family: "Zilla Slab", serif;
+.poppins-extrabold {
+  font-family: "Poppins", system-ui;
+  font-weight: 800;
+  font-style: normal;
+}
+.poppins-black {
+  font-family: "Poppins", system-ui;
+  font-weight: 900;
+  font-style: normal;
+}
+.poppins-thin-italic {
+  font-family: "Poppins", system-ui;
+  font-weight: 100;
+  font-style: italic;
+}
+.poppins-extralight-italic {
+  font-family: "Poppins", system-ui;
+  font-weight: 200;
+  font-style: italic;
+}
+.poppins-light-italic {
+  font-family: "Poppins", system-ui;
   font-weight: 300;
   font-style: italic;
 }
-
-.zilla-slab-regular-italic {
-  font-family: "Zilla Slab", serif;
+.poppins-regular-italic {
+  font-family: "Poppins", system-ui;
   font-weight: 400;
   font-style: italic;
 }
-
-.zilla-slab-medium-italic {
-  font-family: "Zilla Slab", serif;
+.poppins-medium-italic {
+  font-family: "Poppins", system-ui;
   font-weight: 500;
   font-style: italic;
 }
-
-.zilla-slab-semibold-italic {
-  font-family: "Zilla Slab", serif;
+.poppins-semibold-italic {
+  font-family: "Poppins", system-ui;
   font-weight: 600;
   font-style: italic;
 }
-
-.zilla-slab-bold-italic {
-  font-family: "Zilla Slab", serif;
+.poppins-bold-italic {
+  font-family: "Poppins", system-ui;
   font-weight: 700;
   font-style: italic;
+}
+.poppins-extrabold-italic {
+  font-family: "Poppins", system-ui;
+  font-weight: 800;
+  font-style: italic;
+}
+.poppins-black-italic {
+  font-family: "Poppins", system-ui;
+  font-weight: 900;
+  font-style: italic;
+}
+/* Poppins Font */
+
+:root {
+  --primary-color: #132631;
+  --secondary-color: "";
+  --white-color: #ffffff;
+  --black-color: #000000;
 }
 
 body {
   margin: 0;
   padding: 0;
-  font-family: "Zilla Slab", serif;
+  font-family: "Poppins", system-ui;
   font-weight: 400;
   font-style: normal;
-  /* background: navy; */
-  /* color: white; */
 }

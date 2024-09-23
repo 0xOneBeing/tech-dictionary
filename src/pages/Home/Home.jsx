@@ -111,7 +111,7 @@ function Home() {
 
   const handleSearch = () => {
     if (searchTerm) {
-      navigate(`/dictionary/${searchTerm}`);
+      navigate(`/dictionary/${searchTerm.toLowerCase()}`);
     }
   };
 
@@ -129,6 +129,7 @@ function Home() {
             className="p-2 border border-gray-300 rounded"
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
+            autoFocus
           />
           <button
             onClick={handleSearch}

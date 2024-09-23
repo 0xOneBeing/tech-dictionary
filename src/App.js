@@ -16,7 +16,7 @@ function App() {
     // text-[#CBE1EA]
 
     <Router>
-      <div className="min-h-screen bg-[#132631]">
+      <div className="min-h-screen text-[var(--primary-color)] bg-[var(--white-color)]">
         {/* <Header /> */}
         <Routes>
           {routes.map((route) => (
