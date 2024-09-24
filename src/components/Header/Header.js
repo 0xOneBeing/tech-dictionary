@@ -22,11 +22,11 @@ export default function Header() {
   return (
     <>
       <div className="">
-        <div className="small-top text-[0.6rem] text-center py-2 bg-[var(--black-color)] text-[var(--white-color)] tracking-wide">
+        <div className="sm:hidden lg:block small-top text-[0.6rem] text-center py-2 bg-[var(--black-color)] text-[var(--white-color)] tracking-wide">
           Tech Dictionary for Everyone
         </div>
 
-        <div className="bg-[var(--primary-color)] text-[#CBE1EA] md:py-10">
+        <div className="bg-[var(--primary-color)] text-[var(--secondary-color)] px-3 lg:px-0 md:py-10">
           <div className="text-center sticky">
             <div className="container mx-auto text-center">
               <div className="flex justify-between items-center">

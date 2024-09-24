@@ -1,6 +1,6 @@
 import React from "react";
 import { useParams } from "react-router-dom";
-import { terms } from "../../mock_db/term"; // Import the terms data
+import { terms } from "../../data/mock_db/term"; // Import the terms data
 import { Helmet } from "react-helmet";
 
 function TermPage() {
@@ -12,7 +12,7 @@ function TermPage() {
   return (
     <>
       <Helmet>
-        <title>{term} &middot; Tech Dictionary</title>
+        <title>Dictionary: {term} &middot; Tech Dictionary</title>
       </Helmet>
       <div className="p-4 lg:p-6">
         {foundTerm ? (

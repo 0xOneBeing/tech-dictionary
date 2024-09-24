@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { terms } from "../../mock_db/term"; // Import the local data
+import { terms } from "../../data/mock_db/term"; // Import the local data
 import { Helmet } from "react-helmet";
 
 function Admin() {
@@ -7,6 +7,11 @@ function Admin() {
 
   const handleApprove = (id) => {
     // Simulate approving by removing from the list
+    setSubmissions(submissions.filter((sub) => sub.id !== id));
+  };
+
+  const handleReject = (id) => {
+    // Simulate rejecting by removing from the list
     setSubmissions(submissions.filter((sub) => sub.id !== id));
   };
 
@@ -28,12 +33,20 @@ function Admin() {
               >
                 <h2 className="font-semibold">{sub.term}</h2>
                 <p>{sub.description}</p>
-                <button
-                  onClick={() => handleApprove(sub.id)}
-                  className="mt-2 bg-blue-500 hover:bg-red-400 text-white p-2 rounded"
-                >
-                  Approve
-                </button>
+                <div className="flex gap-3">
+                  <button
+                    onClick={() => handleApprove(sub.id)}
+                    className="mt-2 bg-green-400 hover:bg-green-500 transition-colors duration-300 ease-in-out text-white p-2 rounded"
+                  >
+                    Approve
+                  </button>
+                  <button
+                    onClick={() => handleReject(sub.id)}
+                    className="mt-2 bg-red-400 hover:bg-red-500 transition-colors duration-300 ease-in-out text-white p-2 rounded"
+                  >
+                    Reject
+                  </button>
+                </div>
               </div>
             ))
           )}

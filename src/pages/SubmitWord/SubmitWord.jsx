@@ -41,7 +41,7 @@ function SubmitWord() {
             />
             <button
               type="submit"
-              className="w-full p-2 bg-green-500 text-white rounded"
+              className="w-full p-2 bg-green-400 hover:bg-green-500 transition-colors duration-300 ease-in-out text-white rounded"
             >
               Submit
             </button>
