@@ -1,6 +1,6 @@
 # Tech Dictionary
 
-[![https://tech-dictionary.vercel.app/](https://github.com/0xOneBeing/tech-dictionary/blob/main/src/assets/images/logo-1.png?raw=true)](Tech Dictionary)
+[![https://tech-dictionary.vercel.app/](https://github.com/0xOneBeing/tech-dictionary/blob/main/src/assets/images/logo-1.png?raw=true)](https://tech-dictionary.vercel.app/)
 
 A comprehensive dictionary of technical terms, designed to be accessible and informative for everyone.
 
