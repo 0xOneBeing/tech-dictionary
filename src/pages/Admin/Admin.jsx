@@ -1,6 +1,8 @@
 import React, { useState } from "react";
-import { terms } from "../../data/mock_db/term"; // Import the local data
+import { terms } from "../../assets/data/mock_db/term"; // Import the local data
 import { Helmet } from "react-helmet";
+import { Link } from "react-router-dom";
+import Reaction from "../../components/Reaction/Reaction";
 
 function Admin() {
   const [submissions, setSubmissions] = useState(terms); // Use terms array as submissions
@@ -24,7 +26,18 @@ function Admin() {
         <h1 className="text-2xl font-bold text-center">Admin Dashboard</h1>
         <div className="mt-6">
           {submissions.length === 0 ? (
-            <p className="text-center">No submissions pending approval.</p>
+            <>
+              <div className="my-5">
+                <Reaction type="bad" className="mx-auto" />
+              </div>
+              <p className="text-center">No submissions pending approval.</p>
+              <p className="text-center">
+                Go back to{" "}
+                <Link className="underline" to={"/"}>
+                  home
+                </Link>
+              </p>
+            </>
           ) : (
             submissions.map((sub) => (
               <div

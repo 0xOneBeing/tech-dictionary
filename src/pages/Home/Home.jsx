@@ -3,7 +3,8 @@ import { useNavigate } from "react-router-dom";
 import { Helmet } from "react-helmet";
 import { AutoComplete, ConfigProvider, Input } from "antd";
 import { SearchOutlined } from "@ant-design/icons";
-import { terms } from "../../data/mock_db/term";
+import { terms } from "../../assets/data/mock_db/term";
+import splash from "../../assets/images/splash.png";
 
 function Home() {
   const [searchTerm, setSearchTerm] = useState("");
@@ -62,6 +63,7 @@ function Home() {
             </form>
           </ConfigProvider>
         </div>
+        <img src={splash} alt="Splash" className="w-80 mt-[40px] mx-auto" />
       </div>
     </>
   );

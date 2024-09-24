@@ -1,6 +1,6 @@
 import React from "react";
 import { useParams } from "react-router-dom";
-import { terms } from "../../data/mock_db/term"; // Import the terms data
+import { terms } from "../../assets/data/mock_db/term"; // Import the terms data
 import { Helmet } from "react-helmet";
 
 function TermPage() {

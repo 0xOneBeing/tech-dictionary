@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import { Helmet } from "react-helmet";
+import Reaction from "../../components/Reaction/Reaction";
+import { Link } from "react-router-dom";
 
 function SubmitWord() {
   const [term, setTerm] = useState("");
@@ -21,9 +23,20 @@ function SubmitWord() {
       <div className="p-6">
         <h1 className="text-2xl font-bold text-center">Submit a New Word</h1>
         {submitted ? (
-          <p className="text-center text-green-500 mt-4">
-            Your submission is under review.
-          </p>
+          <>
+            <div className="my-5">
+              <Reaction type="good" className="mx-auto" />
+            </div>
+            <p className="text-center text-green-500 mt-4">
+              Your submission is under review.
+            </p>
+            <p className="text-center">
+              Go back to{" "}
+              <Link className="underline" to={"/"}>
+                home
+              </Link>
+            </p>
+          </>
         ) : (
           <form onSubmit={handleSubmit} className="mt-6 max-w-lg mx-auto">
             <input

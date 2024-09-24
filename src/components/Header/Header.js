@@ -1,5 +1,6 @@
 // import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import logo from "../../assets/images/logo-1.png";
 
 export default function Header() {
   // const [scrollPercent, setScrollPercent] = useState(0);
@@ -32,7 +33,7 @@ export default function Header() {
               <div className="flex justify-between items-center">
                 <div>
                   <Link className="" to="/">
-                    Tech Dico
+                   <img src={logo} alt="Tech Dictionary" className="h-10" />
                   </Link>
                 </div>
                 <div>
