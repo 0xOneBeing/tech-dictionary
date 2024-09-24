@@ -31,30 +31,39 @@ export default function Header() {
             <div className="container mx-auto text-center">
               <div className="flex justify-between items-center">
                 <div>
-                  <Link className="underline" to="/">
+                  <Link className="" to="/">
                     Tech Dico
                   </Link>
                 </div>
                 <div>
                   <ul className="flex space-x-4">
                     <li>
-                      <Link className="underline" to="/">
+                      <Link className="hover:underline" to="/">
                         Home
                       </Link>
                     </li>
                     <li>
-                      <Link className="underline" to="/admin">
+                      <Link className="hover:underline" to="/admin">
                         Admin
                       </Link>
                     </li>
                     <li>
-                      <Link className="underline" to="/submit-word">
+                      <Link className="hover:underline" to="/submit-word">
                         Submit Word
                       </Link>
                     </li>
                   </ul>
                 </div>
-                <div>3</div>
+                <div>
+                  <Link
+                    className="hover:underline"
+                    to="https://github.com/0xOneBeing/tech-dictionary.git"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Support
+                  </Link>
+                </div>
               </div>
             </div>
           </div>

@@ -101,6 +101,8 @@
 // Demarkation
 // -------------------------------------
 
+import { SearchOutlined } from "@ant-design/icons";
+import { ConfigProvider, Input } from "antd";
 import React, { useState } from "react";
 import { Helmet } from "react-helmet";
 import { useNavigate } from "react-router-dom";
@@ -120,26 +122,37 @@ function Home() {
       <Helmet>
         <title>Tech Dictionary</title>
       </Helmet>
-      <div className="p-6">
+      <div className="p-6 h-full">
         <h1 className="text-3xl font-bold text-center">Tech Dictionary</h1>
-        <div className="mt-8 flex justify-center">
-          <form>
-            <input
-              type="text"
-              placeholder="Search for a term..."
-              className="p-2 border border-gray-300 rounded"
-              value={searchTerm}
-              onChange={(e) => setSearchTerm(e.target.value)}
-              autoFocus
-            />
-            <button
-              onClick={handleSearch}
-              type="submit"
-              className="ml-2 p-2 bg-blue-500 hover:bg-red-400 text-white transition-colors duration-300 rounded"
-            >
-              Search
-            </button>
-          </form>
+        <div className="mt-8 flex justify-center items-center">
+          <ConfigProvider
+            theme={{
+              token: {
+                colorPrimary: "var(primary-color)",
+              },
+            }}
+          >
+            <form>
+              <Input
+                className="p-2 border border-gray-300 rounded-full w-full text-lg focus:border-2 focus:border-[var(--primary-color)] px-30"
+                type="text"
+                placeholder="Search Dictionary"
+                value={searchTerm}
+                onChange={(e) => setSearchTerm(e.target.value)}
+                onPressEnter={handleSearch}
+                autoFocus
+                allowClear
+                required
+                size="large"
+                suffix={
+                  <SearchOutlined
+                    className="text-[var(--primary-color)] text-2xl font-bold hover:text-green-500 transition-colors duration-300 cursor-pointer"
+                    onClick={handleSearch}
+                  />
+                }
+              />
+            </form>
+          </ConfigProvider>
         </div>
       </div>
     </>
