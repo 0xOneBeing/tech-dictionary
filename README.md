@@ -1,6 +1,6 @@
 # Tech Dictionary
 
-[![https://tech-dictionary.vercel.app/static/media/splash.f7d9addd97c992381d2e.png](https://tech-dictionary.vercel.app/)](https://tech-dictionary.vercel.app/)
+[![https://tech-dictionary.vercel.app/](https://tech-dictionary.vercel.app/static/media/splash.f7d9addd97c992381d2e.png)](https://tech-dictionary.vercel.app/)
 
 A comprehensive dictionary of technical terms, designed to be accessible and informative for everyone.
 
@@ -58,6 +58,6 @@ These instructions will get you a copy of the project up and running on your loc
 
 Contributions are welcome! Feel free to open an issue or submit a pull request.
 
-### License
+<!-- ### License
 
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details. -->
