@@ -45,10 +45,10 @@ export default function SearchBar({
             },
           }}
         >
-          <form>
+          <div>
             <Input
               className={`${className} p-2 border-2 border-[var(--primary-color)] rounded-full w-full text-lg hover:border-2 focus:border-[var(--primary-color)] px-30`}
-              type="text"
+              type="search"
               placeholder="Search Dictionary"
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
@@ -64,7 +64,7 @@ export default function SearchBar({
                 />
               }
             />
-          </form>
+          </div>
         </ConfigProvider>
       </div>
     </>

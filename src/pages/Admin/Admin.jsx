@@ -28,7 +28,7 @@ function Admin() {
           {submissions.length === 0 ? (
             <>
               <div className="my-5">
-                <Reaction type="bad" className="mx-auto" />
+                <Reaction type="good" className="mx-auto" />
               </div>
               <p className="text-center">No submissions pending approval.</p>
               <p className="text-center">

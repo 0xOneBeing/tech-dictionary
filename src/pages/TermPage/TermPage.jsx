@@ -38,14 +38,14 @@ function TermPage() {
               <Reaction type="bad" className="mx-auto" />
             </div>
             <div className="text-center">
-              <h1 className="text-2xl font-bold">"{term}" not found</h1>
+              <h1 className="text-2xl font-bold mb-4">"{term}" not found</h1>
               <p>This term does not exist in the dictionary yet.</p>
               <p>
-                Consider submiting a{" "}
-                <Link className="underline" to="/submit-word">
-                  new word
-                </Link>
-                .
+                Submit a{" "}
+                <Link className="underline" to="/submit-term">
+                  new term
+                </Link>{" "}
+                if you think this is an error.
               </p>
             </div>
           </>

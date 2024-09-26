@@ -1,6 +1,7 @@
 // import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import logo from "../../assets/images/logo-1.png";
+import { routes } from "../../routes";
 
 export default function Header() {
   // const [scrollPercent, setScrollPercent] = useState(0);
@@ -33,26 +34,20 @@ export default function Header() {
               <div className="flex justify-between items-center">
                 <div>
                   <Link className="" to="/">
-                   <img src={logo} alt="Tech Dictionary" className="h-10" />
+                    <img src={logo} alt="Tech Dictionary" className="h-10" />
                   </Link>
                 </div>
                 <div>
                   <ul className="flex space-x-4">
-                    <li>
-                      <Link className="hover:underline" to="/">
-                        Home
-                      </Link>
-                    </li>
-                    <li>
-                      <Link className="hover:underline" to="/admin">
-                        Admin
-                      </Link>
-                    </li>
-                    <li>
-                      <Link className="hover:underline" to="/submit-word">
-                        Submit Word
-                      </Link>
-                    </li>
+                    {routes
+                      .filter((route) => route?.id !== 1 && route?.id !== 5)
+                      .map((route) => (
+                        <li key={route?.id}>
+                          <Link className="hover:underline" to={route?.path}>
+                            {route?.name}
+                          </Link>
+                        </li>
+                      ))}
                   </ul>
                 </div>
                 <div>

@@ -101,6 +101,7 @@
   --secondary-color: #cbe1ea;
   --white-color: #ffffff;
   --black-color: #0a1b27;
+  --red-color: #e03308;
 }
 
 body {
@@ -109,4 +110,18 @@ body {
   font-family: "Poppins", system-ui;
   font-weight: 400;
   font-style: normal;
+}
+
+.ant-tag-close-icon {
+  color: var(--white-color) !important;
+  transition: color 0.3s ease-in-out;
+}
+
+.ant-tag-close-icon:hover {
+  color: var(--red-color) !important;
+}
+
+.ant-input-clear-icon.ant-input-clear-icon-has-suffix {
+  color: var(--red-color) !important;
+  font-size: 1rem !important;
 }
