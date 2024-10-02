@@ -25,23 +25,30 @@ function TermPage() {
           <>
             <h1 className="text-2xl font-bold">{foundTerm.term}</h1>
             <p className="mb-4">
-              {foundTerm.partOfSpeech} &middot; /{foundTerm.term.toLowerCase()}
-              /&nbsp;&middot;&nbsp;
-              <TextToSpeech text={term} />
+              {foundTerm.partOfSpeech} &middot; /{foundTerm.term.toLowerCase()}/
+              <span className="hidden md:inline">
+                &nbsp;&middot;&nbsp;
+                <TextToSpeech text={term} />
+              </span>
             </p>
             <p className="text-xl">
-              <sup>
-                <TextToSpeech text={foundTerm.description} />
-              </sup>
-              &nbsp;
+              <span className="hidden md:inline">
+                <sup>
+                  <TextToSpeech text={foundTerm.description} />
+                </sup>
+                &nbsp;
+              </span>
               {foundTerm.description}
             </p>
             <h6 className="font-bold mt-5">Example Usage</h6>
             <p>
-              <sup>
-                <TextToSpeech text={foundTerm.exampleUsage} />
-              </sup>
-              &nbsp;<em>{foundTerm.exampleUsage}</em>
+              <span className="hidden md:inline">
+                <sup>
+                  <TextToSpeech text={foundTerm.exampleUsage} />
+                </sup>
+                &nbsp;
+              </span>
+              <em>{foundTerm.exampleUsage}</em>
             </p>
           </>
         ) : (
